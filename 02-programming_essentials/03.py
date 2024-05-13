@@ -1,4 +1,5 @@
-import calculator
+#!/usr/bin/env python3
+from calc.calculator import calculator
 num1 = int(input("Enter first num: "))
 num2 = int(input("Enter second num: "))
 op = input("Enter op: ")
