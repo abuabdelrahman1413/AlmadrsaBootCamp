@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE SECTIONS */
+body {
+  color: #444;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+.logo {
+  color: #109BA0;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  width: 500px;
+  border-radius: 3px;
+}
+
+/* SMALLER ELEMENTS */
+h1,
+h2,
+h3 {
+  color: #3D4E60;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-inline-start: 30px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.author-img {
+  border-radius: 3px;
+}
+
+#author {
+  font-style: italic;
+  font-size: 14px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* Styling links */
+a:link {
+  color: #109BA0;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #109BA0;
+}
+
+a:hover {
+  color: #13bec4;
+  font-weight: bold;
+  text-decoration: underline #13bec4;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.separator {
+  margin-right: 30px;
+}
+/* LVHA */
+
+.post-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+.language-nav a:link {
+  margin-right: 0;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 0;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "Trending 🔥";
+  background-color: #109BA0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-left: 30px;
+  margin-top: 14px;
+  border-radius: 3px;
+}
+
+.reactions {
+  position: absolute;
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* RTL styles */
+[dir=rtl] h2::after {
+  content: "الأكثر مشاهدة 🔥";
+}
+
+[dir=rtl] nav a:link {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+[dir=rtl] nav a:link:last-child {
+  margin-left: 0;
+}
+
+[dir=rtl] .language-nav a:link {
+  margin-left: 0;
+}
+
+[dir=rtl] h1::first-letter {
+  margin-left: 0;
+}
+
+[dir=rtl] h2::after {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+[dir=rtl] .separator {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+[dir=rtl] .reactions {
+  right: auto;
+  left: 50px;
+}

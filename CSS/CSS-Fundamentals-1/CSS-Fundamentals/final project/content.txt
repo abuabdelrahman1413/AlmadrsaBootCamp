@@ -1,0 +1,36 @@
+✨ Almdrasa ✨
+
+The Learning Platform that you where waiting for
+
+Posted by Mohamed Abusrea on Saturday, July 2nd 2022
+
+Almdrasa is a new learning platform that tries to fill the gab in the Arabic content. The idea is to find the best programming courses in the field and try to reproduce it in Arabic with high standards  (Audio, Video, Animations, etc)
+
+Let's learn more about Almdrasa platform.
+
+What makes Almdrasa the right choice for you?
+
+Here are 5 reasons that might convince you:
+We pick the courses carefully that has the best reviews, good curriculum and up-to-date to reproduce it in Arabic
+We raised the bar and committed to create high quality courses in all aspects (Audio, Video, Visualizations, Humor, etc...)
+No need to pay for each course. a low price yearly subscription will give you access to all courses
+Communicate with the instructors easily
+Get badges after completion of every course to won prizes
+
+You can learn more at Almdrasa website.
+
+What courses do we offer?
+
+HTML Fundamentals
+CSS Fundamentals
+HTML & CSS Project
+Programming Fundamentals
+Javascript Fundamentals
+
+We also plan to have a full roadmaps for different paths like:
+
+Frontend roadmap
+Backend roadmap
+Fullstack roadmap
+
+That's it for now. See you in the next one 👋!
