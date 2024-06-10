@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     color: #444;
-    ;
+    position: relative;
 }
 
 h1,
@@ -110,4 +110,10 @@ a:active {
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+.reactions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
