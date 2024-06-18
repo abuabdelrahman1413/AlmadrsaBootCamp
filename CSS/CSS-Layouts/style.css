@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -238,6 +239,61 @@ h2::after {
 }
 
 /*Float*/
+[dir="rtl"] body{
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aref-ruqaa-bold {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+[dir="rtl"] .author-img {
+  float: right;
+}
+
+[dir="rtl"] .author {
+  float: right;
+  margin-right: 10px;
+}
+
+[dir="rtl"] h1 {float: right;}
+[dir="rtl"] .nav-content {
+  float: left;
+}
+[dir="rtl"] .main-nav {
+  float: right;
+}
+[dir="rtl"] .language-nav{
+  float: left;
+}
+
+
+
+[dir="rtl"] article {
+  float: right;
+}
+
+[dir="rtl"] aside {
+  
+  float: left;
+}
+
+
+
+[dir="rtl"] .related {
+  margin-right: 0;
+}
+
+
+/*-------------------------*/
+
+
+
+/*Float*/
 .author-img {
   float: left;
   margin-bottom: 20px;
@@ -267,13 +323,27 @@ h1 {float: left;}
 }
 
 article {
-  background-color: red;
+  width: 825px;
+  float: left;
 }
 
 aside {
-  background-color: blue;
+  
+  float: right;
+  width: 300px;
+  position: sticky;
+  top: 20px;
+  padding: 40px 50px;
 }
 
 footer {
-  background-color: yellow;
+  clear: both;
+}
+
+.related {
+  margin-left: 0;
+}
+
+h4 {
+  margin-bottom: 30px;;
 }
