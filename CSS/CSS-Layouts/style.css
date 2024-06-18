@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -235,4 +235,45 @@ h2::after {
 [dir=rtl] .reactions {
   right: auto;
   left: 50px;
+}
+
+/*Float*/
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+h1 {float: left;}
+.nav-content {
+  float: right;
+}
+.main-nav {
+  float: left;
+}
+.language-nav{
+  float: right;
+}
+
+.main-header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+article {
+  background-color: red;
+}
+
+aside {
+  background-color: blue;
+}
+
+footer {
+  background-color: yellow;
 }
