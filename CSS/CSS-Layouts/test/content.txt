@@ -1,0 +1,33 @@
+📗 The Code Magazine
+
+The Basic Language of the Web: HTML
+
+Posted by John Smith on Thursday, August 21st 2025
+
+HTML, CSS, and JavaScript are the three basic technologies used to create contemporary webpages and online apps. These are the web's languages.
+
+Let's concentrate on HTML in this article. We'll go through what HTML is and why you should learn it as well.
+
+What is HTML?
+
+HTML stands for HyperText Markup Language. It's a markup language that web developers use to structure and describe the content of a webpage (not a programming language).
+
+Paragraphs, links, headers, pictures, video, and other sorts of content are all described using HTML elements. HTML is understood by web browsers, which render HTML code as webpages.
+
+In HTML, each element is made up of 3 parts:
+
+The opening tag
+The closing tag
+The actual element
+You can learn more at the MDN Web Docs.
+
+Why should you learn HTML?
+
+There are countless reasons for learning the fundamental language of the web. Here are 5 of them:
+
+To be able to utilize the most basic web development language
+Instead of depending on tools like Worpress or Wix, to hand-craft stunning websites
+Developing web apps
+To impress friends and have a good time
+
+Hopefully you learned something new here. See you next time!
