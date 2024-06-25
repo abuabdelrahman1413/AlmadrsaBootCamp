@@ -239,7 +239,7 @@ h2::after {
 }
 
 /*Float*/
-[dir="rtl"] body {
+/* [dir="rtl"] body {
     font-family: "Aref Ruqaa", serif;
     font-weight: 400;
     font-style: normal;
@@ -274,7 +274,7 @@ h2::after {
 
 [dir="rtl"] .language-nav {
     float: left;
-}
+} */
 
 
 
