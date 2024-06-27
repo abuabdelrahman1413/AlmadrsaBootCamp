@@ -1,0 +1,29 @@
+/*Start CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: transparent;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+/*End CSS Reset*/
