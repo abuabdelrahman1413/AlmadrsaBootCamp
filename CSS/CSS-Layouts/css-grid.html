@@ -11,12 +11,18 @@
       }
       .el--2 {
         background-color: orangered;
+        grid-column: -5/-4;
+        grid-row: 2/3;
       }
       .el--3 {
         background-color: green;
+        grid-row: 1/-1;
+        /* grid-column: 1/-1; */
+        grid-column: 1/span 1;
       }
       .el--4 {
         background-color: goldenrod;
+
       }
       .el--5 {
         background-color: palevioletred;
@@ -30,6 +36,8 @@
       }
       .el--8 {
         background-color: crimson;
+        grid-column: 2/3;
+        grid-row: 1/2;
       }
 
       .container--1 {
@@ -41,10 +49,12 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 200px 150px;
-        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
         row-gap: 30px;
         column-gap: 50px;
+
+        display: none;
       }
 
       .container--2 {
@@ -64,14 +74,15 @@
         gap: 50px;
 
         /* Aligning tracks inside container: distribute empty space */
-        justify-content: center;
+        justify-content:center;
         /* justify-content: space-between; */
-        align-content: center;
+        align-content: end;
+        justify-items: end;
 
         /* Aligning items INSIDE cells: moving items around inside cells */
-        align-items: end;
-        justify-items: end;
-        display: none;
+        /* align-items: end; */
+        /* justify-items: end; */
+        /* display: grid; */
       }
     </style>
   </head>

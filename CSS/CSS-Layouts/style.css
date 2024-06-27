@@ -43,7 +43,7 @@ article {
 aside {
     background-color: #f7f7f7;
     padding: 50px 0;
-    width: 500px;
+    /* width: 100%; */
     border-radius: 3px;
 }
 
@@ -399,14 +399,24 @@ h4 {
     font-size: 20px;
 }
 
-.row {
-    display: flex;
-    gap: 75px;
-    align-items: flex-start;
+
+
+footer {
+    border-top: 1px solid black;
+    padding-top: 10px;
 }
 
-aside {
-    /* flex-shrink: 0; */
-    /* flex-basis: 300px; */
-    flex: 0 0 350px;
+.container { 
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: start;
+    gap: 30px;
+}
+
+.main-header  {
+    grid-column: 1/-1;
+}
+
+footer {
+    grid-column: 1/-1;
 }
