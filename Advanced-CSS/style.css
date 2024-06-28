@@ -49,7 +49,7 @@
 }
 
 a {
-  color: transparent;
+  color: inherit;
   display: inline-block; /*Because by default a get blue color*/
 }
 
@@ -63,6 +63,54 @@ ul,
 ol {
   list-style: none;
 }
+
+body {
+  font-size: 15px;
+  font-family: var(--font-family-raleway);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/*Center the container*/
+.container {
+  margin: 0 auto; /*center a container*/
+  max-width: var(--container-width);
+}
+
+.navigation_list {
+  display: flex; /* ✅ */
+  gap: 2rem; /* ✅ */
+}
+
+.navigation_link:link,
+.navigation_link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation_link:hover,
+.navigation_link:active {
+  text-decoration: underline;
+  color: var(--color-blue);
+}
+
+.header {
+  padding: 3rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  z-index: -1;
+}
+
 /*End CSS Reset*/
 
 /**Units
@@ -76,5 +124,3 @@ rm: root based 10 * 16
 vh 90v 90% of height of browser
 vw 80v of height of browser
 */
-
-/*css variables*/
