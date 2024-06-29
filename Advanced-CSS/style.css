@@ -124,3 +124,51 @@ rm: root based 10 * 16
 vh 90v 90% of height of browser
 vw 80v of height of browser
 */
+
+/*Toggle*/
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.toggle_checkbox {
+  display: none;
+}
+
+.toggle_title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+
+.toggle_label {
+  display: block;
+  position: relative;
+  background-color: var(--color-black);
+  border-radius: 1.5rem;
+  width: 4.5rem;
+  height: 2.2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  transition: 0.3s;
+}
+
+.toggle_label::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+
+.toggle_checkbox:checked + .toggle_label {
+  background-color: var(--color-white);
+}
+
+.toggle_checkbox:checked + .toggle_label::after {
+  transform: translateX(2.1rem);
+  background-color: var(--color-green);
+}
+/*Toggle End*/
