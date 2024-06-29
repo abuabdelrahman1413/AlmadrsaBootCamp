@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --container-width: 119rem;
+  --container-width: 130rem;
   --gutter: 2rem;
   --color-black: #000;
   --color-white: #fff;
@@ -71,7 +71,7 @@ html {
 }
 
 body,
-[type=submit] {
+[type="submit"] {
   font-size: 1.6rem;
   font-family: var(--font-family-raleway);
   background-color: var(--color-background);
@@ -231,7 +231,7 @@ body,
 
 .bio {
   -moz-column-gap: 7.4rem;
-       column-gap: 7.4rem;
+  column-gap: 7.4rem;
   row-gap: 0;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -276,7 +276,7 @@ body,
 .bio .find-out-link {
   padding: 0.7rem 0;
   -webkit-margin-start: 1.4rem;
-          margin-inline-start: 1.4rem;
+  margin-inline-start: 1.4rem;
 }
 @-webkit-keyframes jump {
   0% {
@@ -309,7 +309,7 @@ body,
 .bio__arrow {
   display: inline-block;
   -webkit-animation: jump 1s infinite ease-in-out alternate;
-          animation: jump 1s infinite ease-in-out alternate;
+  animation: jump 1s infinite ease-in-out alternate;
 }
 .bio__pic-content {
   display: flex;
@@ -340,9 +340,9 @@ body,
 .skills__item {
   transition: var(--transition-timing);
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .skills__title {
@@ -371,7 +371,7 @@ body,
 
 .projects__main {
   -moz-column-gap: 7.4rem;
-       column-gap: 7.4rem;
+  column-gap: 7.4rem;
   row-gap: 7.5rem;
   grid-template-columns: repeat(2, 1fr);
   display: grid;
@@ -412,7 +412,7 @@ body,
   display: flex;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .clients__opinion {
@@ -423,7 +423,7 @@ body,
 
 .contact {
   -moz-column-gap: 20rem;
-       column-gap: 20rem;
+  column-gap: 20rem;
   row-gap: 0;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -577,4 +577,4 @@ html:has(.toggle__checkbox:checked) {
     padding: 3rem 0;
     z-index: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

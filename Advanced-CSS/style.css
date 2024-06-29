@@ -65,7 +65,7 @@ ol {
 }
 
 body {
-  font-size: 15px;
+  font-size: 1.6rem;
   font-family: var(--font-family-raleway);
   background-color: var(--color-background);
   color: var(--color-text);
@@ -74,7 +74,25 @@ body {
 /*Center the container*/
 .container {
   margin: 0 auto; /*center a container*/
-  max-width: var(--container-width);
+  max-width: calc(var(--container-width) + var(--gutter) * 2);
+  padding-inline: var(--gutter);
+}
+
+.header {
+  padding: 3rem 0;
+  position: relative;
+  justify-content: center;
+  display: flex;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  top: 0.1rem;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  z-index: -1;
 }
 
 .navigation_list {
@@ -92,23 +110,6 @@ body {
 .navigation_link:active {
   text-decoration: underline;
   color: var(--color-blue);
-}
-
-.header {
-  padding: 3rem 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100vw;
-  top: 0;
-  border-bottom: 0.1rem solid var(--color-input-border);
-  z-index: -1;
 }
 
 /*End CSS Reset*/
@@ -172,3 +173,78 @@ vw 80v of height of browser
   background-color: var(--color-green);
 }
 /*Toggle End*/
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
+}
+
+/*Bio*/
+.bio {
+  column-gap: 7.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bio__heading {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-70);
+}
+
+.bio__objective {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-20);
+  margin: 3rem 0 8rem;
+}
+
+.bio__name {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.bio__almdrasa {
+  color: var(--color-green);
+}
+
+.bio__links {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+}
+
+.say-hi-link {
+  background-color: var(--color-link-bg);
+  padding: 0.7rem 4.7rem;
+  color: var(--color-white);
+}
+
+.find-out-link {
+  padding: 0.7rem 0;
+  margin-inline-start: 1.4rem;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0.5rem);
+  }
+  35% {
+    transform: translateY(-0.5rem);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bio__arrow {
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+  font-weight: 900;
+  font-size: var(--font-size-35);
+}
+
+/*Bio End*/
