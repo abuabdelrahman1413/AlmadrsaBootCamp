@@ -67,7 +67,7 @@ ol {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   scroll-behavior: smooth;
   scroll-padding-top: 11rem;
 }
@@ -90,6 +90,16 @@ body,
   max-width: calc(var(--container-width) + var(--gutter) * 2);
   padding-inline: var(--gutter);
 }
+
+.video__loop {
+  position: fixed; /*بتشبه absolute  لكن دي ما بتحترم الأب */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.08;
+  z-index: -1;
+}
 /*End container*/
 
 /*Glopal styles*/
@@ -99,6 +109,13 @@ body,
   font-weight: var(--font-weight-bold);
   grid-column: 1/-1;
   margin-bottom: 8.7rem;
+  text-transform: uppercase;
+}
+
+.h3__heading {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
 }
 
@@ -330,3 +347,24 @@ vw 80v of height of browser
 }
 
 /*End Skills*/
+
+/*Media*/
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media__video {
+  width: 100%; /*you need this with video and images if not the width be out of the page*/
+}
+/*End media*/
+
+/*Projects*/
+.projects__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 7.4rem;
+  row-gap: 7.5rem;
+}
+
+/*End projects*/
