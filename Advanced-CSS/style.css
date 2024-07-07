@@ -15,7 +15,7 @@
   --color-background: var(--color-white);
   --color-text: var(--color-black);
   --color-box-img: var(--color-black);
-  --color-link-bg: var(--color-black);
+  --color-link-bg: var(--color-green);
   --color-input-border: var(--color-black);
   --font-family-raleway: "Raleway", sans-serif;
   --font-family-poppins: "Poppins", sans-serif;
@@ -137,7 +137,7 @@ body,
   position: absolute;
   height: 100%;
   width: 100vw;
-  background-color: var(--color-grey);
+  background-color: var(--color-background);
   justify-self: center;
   z-index: -1;
 }
@@ -169,7 +169,7 @@ body,
   top: 0.1rem;
   border-bottom: 0.1rem solid var(--color-input-border);
   z-index: -1;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
 }
 
 .navigation_list {
@@ -180,41 +180,45 @@ body,
 .navigation_link:link,
 .navigation_link:visited {
   text-decoration: none;
-  font-weight: var(bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .navigation_link:hover,
 .navigation_link:active {
   text-decoration: underline;
-  color: var(--color-blue);
+  color: var(--color-light-blue);
 }
 
-.container:has(.bio:target) .navigation__bio {
-  color: var(--color-blue);
-  text-decoration: underline;
-  font-weight: var(bold);
-}
-
-.container:has(.skills:target) .navigation__skills {
-  color: var(--color-blue);
+.container:has(#bio:target) .navigation__bio {
+  color: var(--color-link-bg);
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
 }
 
-.container:has(.media:target) .navigation__media {
-  color: var(--color-blue);
+.container:has(#skills:target) .navigation__skills {
+  color: var(--color-link-bg);
+
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
 }
 
-.container:has(.projects:target) .navigation__projects {
-  color: var(--color-blue);
+.container:has(#media:target) .navigation__media {
+  color: var(--color-link-bg);
+
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
 }
 
-.container:has(.clients:target) .navigation__clients {
-  color: var(--color-blue);
+.container:has(#projects:target) .navigation__projects {
+  color: var(--color-link-bg);
+
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+.container:has(#clients:target) .navigation__clients {
+  color: var(--color-link-bg);
+
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
 }
@@ -269,9 +273,13 @@ vw 80v of height of browser
   transition: 0.3s;
 }
 
-.toggle_checkbox:checked + .toggle_label {
-  background-color: var(--color-white);
-}
+/* This CSS rule targets the `.toggle_label` element that is placed immediately
+   after the `.toggle_checkbox` element that is checked. The `+` selector in CSS
+   is the adjacent sibling combinator, which selects the element that comes immediately
+   after the first specified element (in this case, the `.toggle_checkbox` element).
+   The `:checked` pseudo-class targets the `.toggle_checkbox` element when it is
+   in the checked state, and the `background-color` property sets the background
+   color of the `.toggle_label` element to white. */
 
 .toggle_checkbox:checked + .toggle_label::after {
   transform: translateX(2.1rem);
@@ -512,6 +520,9 @@ vw 80v of height of browser
 
   transform: scale(1.3);
 }
+html:has(.toggle_checkbox:checked) .contact__social {
+  filter: invert(1);
+}
 
 .contact__inputs {
   display: flex;
@@ -562,3 +573,14 @@ footer {
   font-size: var(--font-size-20);
 }
 /*End footer*/
+
+/*Theme*/
+html:has(.toggle_checkbox:checked) {
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+  --color-box-img: var(--color-green);
+  --color-link-bg: var(--color-green);
+  --color-grey: #08080808;
+  --color-input-border: var(--color-white);
+}
+/*End theme*/
