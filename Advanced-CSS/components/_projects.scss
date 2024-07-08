@@ -1,11 +1,9 @@
-
+@import "./mixin";
 
 /*Projects*/
 .projects__main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 7.4rem;
-    row-gap: 7.5rem;
+    @include towColumn($column-gap:7.4rem, $row-gap:7.4rem);
   }
   
   .projects__img {

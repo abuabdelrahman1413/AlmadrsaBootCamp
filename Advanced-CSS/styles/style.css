@@ -288,9 +288,10 @@ vw 80v of height of browser
 /*Toggle End*/
 /*Bio*/
 .bio__section {
+  grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 7.4rem;
        column-gap: 7.4rem;
-  grid-template-columns: repeat(2, 1fr);
+  row-gap: 0;
 }
 
 .bio__heading {
@@ -413,7 +414,7 @@ vw 80v of height of browser
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 7.4rem;
        column-gap: 7.4rem;
-  row-gap: 7.5rem;
+  row-gap: 7.4rem;
 }
 
 .projects__img {
@@ -475,6 +476,7 @@ vw 80v of height of browser
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 20rem;
        column-gap: 20rem;
+  row-gap: 0;
   align-items: center;
 }
 
@@ -669,4 +671,4 @@ html:has(.toggle_checkbox:checked) {
     z-index: 1;
   }
 }
-/*End responsive*/
+/*End responsive*//*# sourceMappingURL=style.css.map */

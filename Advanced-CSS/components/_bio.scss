@@ -1,9 +1,8 @@
-
+@import "./mixin";
 
 /*Bio*/
 .bio__section {
-    column-gap: 7.4rem;
-    grid-template-columns: repeat(2, 1fr);
+  @include towColumn($column-gap: 7.4rem, $row-gap: 0);
   }
   
   .bio__heading {
