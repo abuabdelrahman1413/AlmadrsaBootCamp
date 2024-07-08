@@ -1,214 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammed Said</title>
 
-  <title>Mohammed Said</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./styles/style.css" />
-</head>
-
-<body>
-  <div class="container">
-    <video class="video__loop" autoplay loop muted>
-      <source src="video-loop.mp4" type="video/mp4" />
-    </video>
-    <header class="header">
-
-      <label for="menu" class="burger--menu">
-      <div class="burger--menu__bar"></div>
-      <div class="burger--menu__bar"></div>
-      <div class="burger--menu__bar"></div>  
-      </label>
-
-      <input id="menu" class="burger--menu__checkbox" type="checkbox" />
-
-      <nav class="navigation__bar">
-        <ul class="navigation_list">
-          <li><a href="#bio" class="navigation_link navigation__bio">Bio</a></li>
-          <li><a href="#skills" class="navigation_link navigation__skills">Skills</a></li>
-          <li><a href="#media" class="navigation_link navigation__media">Media</a></li>
-          <li><a href="#projects" class="navigation_link navigation__projects">Projects</a></li>
-          <li><a href="#clients" class="navigation_link navigation__clients">My Clients</a></li>
-          <li><a href="#contact" class="navigation_link navigation__contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="toggle">
-        <h3 class="toggle_title">Switch theme</h3>
-        <input type="checkbox" name="checkbox" id="toggle" class="toggle_checkbox" />
-        <label for="toggle" class="toggle_label"></label>
-      </div>
-    </header>
-
-    <section id="bio" class="bio__section section">
-      <div class="bio__data">
-        <h1 class="bio__heading">
-          Hi There, I'M A passionate Software Enginner
-        </h1>
-        <p class="bio__objective">
-          My name is
-          <span class="bio__name">Mohammed Said, a student at
-            <a href="https://almdrasa.com" class="bio__almdrasa">Almdrasa.com</a>
-          </span>
-        </p>
-        <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
-        <a href="#" class="bio__links find-out-link">Download CV <span class="bio__arrow"> ↓</span></a>
-      </div>
-      <div class="bio__pic-content">
-        <img class="bio__pic" src="/images/photo_2019-08-18_17-52-22.png" alt="personal image" />
-      </div>
-    </section>
-    <section id="skills" class="skills__section section section-wt-bg">
-      <h2 class="h2__heading">Skills</h2>
-      <ul class="skills__list">
-        <li class="skills__item">
-          <h2 class="skills_title">HTML</h2>
-          <span class="experince">8 years</span>
-        </li>
-        <li class="skills__item">
-          <h2 class="skills_title">CSS</h2>
-          <span class="experince">8 years</span>
-        </li>
-        <li class="skills__item">
-          <h2 class="skills_title">Javascript</h2>
-          <span class="experince">8 years</span>
-        </li>
-        <li class="skills__item">
-          <h2 class="skills_title">React</h2>
-          <span class="experince">4 years</span>
-        </li>
-        <li class="skills__item">
-          <h2 class="skills_title">Redux</h2>
-          <span class="experince">4 years</span>
-        </li>
-        <li class="skills__item">
-          <h2 class="skills_title">React testing library</h2>
-          <span class="experince">4 years</span>
-        </li>
-      </ul>
-    </section>
-    <section id="media" class="media__section">
-      <video poster="images/thumbnail.jpg" controls class="media__video">
-        <source src="video.mp4" type="video.mp4" />
-        <!--أحط أكثر من صيغة عشان اتأكد انو الأول لو ما اشتغل الثاني حيشتغل-->
-        Your browser not support the video tag.
+  <body>
+    <div class="container">
+      <video class="video__loop" autoplay loop muted>
+        <source src="video-loop.mp4" type="video/mp4" />
       </video>
-    </section>
+      <header class="header">
+        <label for="menu" class="burger--menu">
+          <div class="burger--menu__bar"></div>
+          <div class="burger--menu__bar"></div>
+          <div class="burger--menu__bar"></div>
+        </label>
 
-    <section id="projects" class="projects__section" class="section">
-      <h2 class="h2__heading">My Featured<br />Projects</h2>
-      <div class="projects__main">
-        <img class="projects__img" src="images/project-1.jpg" alt="quran tab" />
-        <div class="projects__data">
-          <h3 class="h3__heading">Quran Tab</h3>
-          <p class="projects__description">
-            Quran Tab is an Islamic new tab page that will keep you inspired
-            by a verse from the Quran every time you open a new tab that helps
-            you achieve your "Khatma" and keeps you connected with the words
-            of Allah.
-          </p>
-          <a class="projects__link" href="https://bit.ly/qt-chrome" target="_blank">Chrome Link</a>
-          <span>-</span>
-          <a class="projects__link" href="https://bit.ly/qt-edge" target="_blank">Edge Link</a>
+        <input id="menu" class="burger--menu__checkbox" type="checkbox" />
+
+        <nav class="navigation__bar">
+          <ul class="navigation_list">
+            <li>
+              <a href="#bio" class="navigation_link navigation__bio">Bio</a>
+            </li>
+            <li>
+              <a href="#skills" class="navigation_link navigation__skills"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="#media" class="navigation_link navigation__media"
+                >Media</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="navigation_link navigation__projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#clients" class="navigation_link navigation__clients"
+                >My Clients</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="navigation_link navigation__contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <h3 class="toggle_title">Switch theme</h3>
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="toggle"
+            class="toggle_checkbox"
+          />
+          <label for="toggle" class="toggle_label"></label>
         </div>
+      </header>
 
-        <img class="projects__img" src="images/project-1.jpg" alt="quran tab" />
-        <div class="projects__data">
-          <h3 class="h3__heading">Quran Tab</h3>
-          <p class="projects__description">
-            Quran Tab is an Islamic new tab page that will keep you inspired
-            by a verse from the Quran every time you open a new tab that helps
-            you achieve your "Khatma" and keeps you connected with the words
-            of Allah.
+      <section id="bio" class="bio__section section">
+        <div class="bio__data">
+          <h1 class="bio__heading">
+            Hi There, I'M A passionate Software Enginner
+          </h1>
+          <p class="bio__objective">
+            My name is
+            <span class="bio__name"
+              >Mohammed Said, a student at
+              <a href="https://almdrasa.com" class="bio__almdrasa"
+                >Almdrasa.com</a
+              >
+            </span>
           </p>
-          <a class="projects__link" href="https://bit.ly/qt-chrome" target="_blank">Chrome Link</a>
-          <span>-</span>
-          <a class="projects__link" href="https://bit.ly/qt-edge" target="_blank">Edge Link</a>
+          <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
+          <a href="#" class="bio__links find-out-link"
+            >Download CV <span class="bio__arrow"> ↓</span></a
+          >
         </div>
-      </div>
-    </section>
-
-    <section class="clients__section section-wt-bg section" id="clients">
-      <h2 class="h2__heading">What My<br />Clients says</h2>
-      <div class="clinents__opinions">
-        <div class="clients__wrapper">
-          <p class="clients__opinion">
-            Abusrea has the advantageous ability to understand a problem and
-            implement code to a high standard within the deadline. Each
-            project we have worked on, I know I can completely trust Abusrea
-            to own his tasks and complete what is needed when asked of him.
-          </p>
-          <p class="clients__opinion">
-            Mohamed will patiently listen to you and give you his own Ideas as
-            well, and in the end, he comes up with something completely
-            different from what you’re expecting, but the good news is, you’ll
-            always love it.
-          </p>
-          <p class="clients__opinion">
-            I had a chance to work closely with Mohamed as a direct manager
-            from hist first day at DeliveryHero until my last day there
-            (6+months). Mohamed's biggest strengths that I admire are taking
-            initiatives on personal and team level, and driving them.
-          </p>
+        <div class="bio__pic-content">
+          <img
+            class="bio__pic"
+            src="/images/photo_2019-08-18_17-52-22.png"
+            alt="personal image"
+          />
         </div>
-      </div>
-    </section>
+      </section>
+      <section id="skills" class="skills__section section section-wt-bg">
+        <h2 class="h2__heading">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <h2 class="skills_title">HTML</h2>
+            <span class="experince">6 months</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills_title">CSS</h2>
+            <span class="experince">6 months</span>
+          </li>
+          <!-- <li class="skills__item">
+            <h2 class="skills_title">Javascript</h2>
+            <span class="experince">8 years</span>
+          </li> -->
+          <!-- <li class="skills__item">
+            <h2 class="skills_title">React</h2>
+            <span class="experince">4 years</span>
+          </li> -->
+          <li class="skills__item">
+            <h2 class="skills_title">C</h2>
+            <span class="experince">6 months</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills_title">Python</h2>
+            <span class="experince">6 months</span>
+          </li>
+        </ul>
+      </section>
+      <!--
+      <section id="media" class="media__section">
+        <video poster="images/thumbnail.jpg" controls class="media__video">
+          <source src="video.mp4" type="video.mp4" />
+          Your browser not support the video tag.
+        </video>
+      </section>
+    -->
 
-    <section id="contact" class="contact__section section">
-      <div class="contact__info">
-        <p class="contact__description">
-          Feel free to reach out to me any time. I prefer to talk over email,
-          especially since we may be a few time zones away.
-        </p>
-        <!-- The "mailto:" prefix in the href attribute is a URL protocol 
+      <section id="projects" class="projects__section" class="section">
+        <h2 class="h2__heading">My Featured<br />Projects</h2>
+        <div class="projects__main">
+          <img
+            class="projects__img"
+            src="images/a8704785-70fd-4b84-b864-210c467832fe.jpg"
+            alt="quran tab"
+          />
+          <div class="projects__data">
+            <h3 class="h3__heading">Printf</h3>
+            <p class="projects__description">
+              Custom printf Function Simulation in C In this project, I
+              developed a custom implementation of the printf function in the C
+              programming language. This involved replicating the core
+              functionality of printf, including handling various format
+              specifiers (e.g., %d, %s, %f) and ensuring correct output
+              formatting. The project was a deep dive into understanding
+              standard library functions, memory management, and string
+              manipulation in C. This experience not only enhanced my skills in
+              C programming but also provided insights into how fundamental
+              functions are built and optimized.
+            </p>
+            <a
+              class="projects__link"
+              href="https://github.com/Mistroo35/printf"
+              target="_blank"
+              >Github Link</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="clients__section section-wt-bg section" id="clients">
+        <h2 class="h2__heading">What My<br />Clients says</h2>
+        <div class="clinents__opinions">
+          <div class="clients__wrapper">
+            <p class="clients__opinion">
+              Abusrea has the advantageous ability to understand a problem and
+              implement code to a high standard within the deadline. Each
+              project we have worked on, I know I can completely trust Abusrea
+              to own his tasks and complete what is needed when asked of him.
+            </p>
+            <p class="clients__opinion">
+              Mohamed will patiently listen to you and give you his own Ideas as
+              well, and in the end, he comes up with something completely
+              different from what you’re expecting, but the good news is, you’ll
+              always love it.
+            </p>
+            <p class="clients__opinion">
+              I had a chance to work closely with Mohamed as a direct manager
+              from hist first day at DeliveryHero until my last day there
+              (6+months). Mohamed's biggest strengths that I admire are taking
+              initiatives on personal and team level, and driving them.
+            </p>
+          </div>
+        </div>
+      </section> -->
+
+      <section id="contact" class="contact__section section">
+        <div class="contact__info">
+          <p class="contact__description">
+            Feel free to reach out to me any time. I prefer to talk over email,
+            especially since we may be a few time zones away.
+          </p>
+          <!-- The "mailto:" prefix in the href attribute is a URL protocol 
            that instructs the browser to open the user's default email client with a new email
             pre-populated with the email address in the href attribute. -->
-        <a href="mailto:ms22abuabdelrahman@gmail.com" class="contact__email">ms22abuabdelrahman@gmail.com</a>
+          <a href="mailto:ms22abuabdelrahman@gmail.com" class="contact__email"
+            >ms22abuabdelrahman@gmail.com</a
+          >
 
-        <div class="contact__socials">
-          <a href="" class="contact__social">
-            <img src="images/brand/LinkedIn.svg" alt="LinkedIn" /></a><a href="" class="contact__social">
-            <img src="images/brand/github.svg" alt="github" /></a><a href="" class="contact__social">
-            <img src="images/brand/instagram.svg" alt="instagram" /></a><a href="" class="contact__social">
-            <img src="images/brand/facebook.svg" alt="facebook" /></a><a href="" class="contact__social">
-            <img src="images/brand/twitter.svg" alt="twitter" /></a><a href="" class="contact__social">
-            <img src="images/brand/youtube.svg" alt="youtube" />
-          </a>
-        </div>
-      </div>
-
-      <div class="contact__form">
-        <h2 class="h2__heading">
-          Let's Work<br /> Together!
-        </h2>
-        <form action="results.html">
-          <div class="contact__inputs">
-            <input class="contact__input" type="text" name="Full Name" placeholder="Full Name" required >
-            <input class="contact__input" type="tel" name="Telephone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
+          <div class="contact__socials">
+            <a href="" class="contact__social">
+              <img src="images/brand/LinkedIn.svg" alt="LinkedIn" /></a
+            ><a href="" class="contact__social">
+              <img src="images/brand/github.svg" alt="github" /></a
+            ><a href="" class="contact__social">
+              <img src="images/brand/instagram.svg" alt="instagram" /></a
+            ><a href="" class="contact__social">
+              <img src="images/brand/facebook.svg" alt="facebook" /></a
+            ><a href="" class="contact__social">
+              <img src="images/brand/twitter.svg" alt="twitter" /></a
+            ><a href="" class="contact__social">
+              <img src="images/brand/youtube.svg" alt="youtube" />
+            </a>
           </div>
-          <textarea class="contact__textarea contact__input" name="description" id="description"rows="1" placeholder="Your Message" required></textarea>
-          <input type="submit" class="contact__button" value="Send Message" />
+        </div>
 
-
-        </form>
-      </div>
-    </section>
-    <footer>
-      <div class="footer">© 2024 by Mohamed Said</div>
-    </footer>
-  </div>
-</body>
-
+        <div class="contact__form">
+          <h2 class="h2__heading">
+            Let's Work<br />
+            Together!
+          </h2>
+          <form action="results.html">
+            <div class="contact__inputs">
+              <input
+                class="contact__input"
+                type="text"
+                name="Full Name"
+                placeholder="Full Name"
+                required
+              />
+              <input
+                class="contact__input"
+                type="tel"
+                name="Telephone"
+                placeholder="Phone Number"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <textarea
+              class="contact__textarea contact__input"
+              name="description"
+              id="description"
+              rows="1"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <input type="submit" class="contact__button" value="Send Message" />
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="footer">© 2024 by Mohamed Said</div>
+      </footer>
+    </div>
+  </body>
 </html>
