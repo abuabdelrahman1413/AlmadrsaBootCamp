@@ -1,0 +1,89 @@
+
+
+/*Contact*/
+.contact__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20rem;
+    align-items: center;
+  }
+  
+  .contact__description {
+    font-size: var(--font-size-24);
+    line-height: 1.7;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .contact__email {
+    font-weight: var(--font-weight-bold);
+    font-size: x-large;
+    margin: 2.5rem 0;
+  }
+  
+  .contact__social {
+    /*transition is used to change the properties smoothly like color,width,height,margin,padding,opacity
+    transform is used to change the position or shape of the element like scale, rotate, translate,skew*/
+  
+    /*transition: property duration timing-function delay iteration-count direction fill-mode;
+    property: which property we want to change
+    duration: how long the transition will take
+    timing-function: how smooth the transition will be
+    delay: how much time the transition will wait to start
+    iteration-count: how many times the transition will repeat
+    direction: the direction of the transition
+    fill-mode: the state of the element before and after the transition*/
+  
+    transition: var(--transition-timing);
+    cursor: pointer;
+  }
+  
+  .contact__social:hover {
+    /*When we hover on the social icon, it will scale up by 30%*/
+    /*transform: transform-function | transform-function;
+    transform-function: scale, rotate, translate,skew, matrix*/
+  
+    transform: scale(1.3);
+  }
+  html:has(.toggle_checkbox:checked) .contact__social {
+    filter: invert(1);
+  }
+  
+  .contact__inputs {
+    display: flex;
+    gap: 3rem;
+  }
+  
+  .contact__input {
+    border: 0;
+    outline: 0;
+    border-bottom: 0.1rem solid var(--color-input-border);
+    background: transparent;
+    font-size: var(--font-size-20);
+  
+    /*The flex-grow property specifies the flex grow factor, 
+    which determines how much of the remaining space in the flex container should be assigned to the item.
+    It accepts any positive number, including 0 if no growth is desired. The default value is 0,
+     meaning by default, the item does not grow. */
+    flex: 1;
+  }
+  
+  .contact__textarea {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  
+  .contact__button {
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    padding: 1.7rem 1.8rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-24);
+    margin-top: 3.4rem;
+  }
+  
+  form:invalid::after {
+    content: "Invalid data";
+    font-size: var(--font-size-20);
+    color: #ff0000;
+  }
+  /*End contact*/

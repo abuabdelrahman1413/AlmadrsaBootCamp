@@ -1,0 +1,152 @@
+
+
+.header {
+    padding: 3rem 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    justify-content: center;
+    display: flex;
+    z-index: 1;
+    /*padding: 3rem 0; This is the padding at the top and bottom of the header*/
+    /*position: sticky; This makes the header stick to the top of the screen while scrolling*/
+    /*top: 0; This is the distance of the header from the top of the screen*/
+    /*background-color: var(--color-background); This is the background color of the header*/
+    /*justify-content: center; This centers the content of the header*/
+    /*display: flex; This displays the header as a flex box*/
+    /*z-index: 1; This is the stack order of the header*/
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0.1rem;
+    border-bottom: 0.1rem solid var(--color-input-border);
+    z-index: -1;
+    background-color: var(--color-background);
+  }
+  
+  .navigation__bar {
+    transition: var(--transition-timing);
+  }
+  
+  .navigation_list {
+    display: flex; /* ✅ */
+    gap: 2rem; /* ✅ */
+  }
+  
+  .navigation_link:link,
+  .navigation_link:visited {
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .navigation_link:hover,
+  .navigation_link:active {
+    text-decoration: underline;
+    color: var(--color-text);
+  }
+  
+  .container:has(#bio:target) .navigation__bio {
+    color: var(--color-link-bg);
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .container:has(#skills:target) .navigation__skills {
+    color: var(--color-link-bg);
+  
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .container:has(#media:target) .navigation__media {
+    color: var(--color-link-bg);
+  
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .container:has(#projects:target) .navigation__projects {
+    color: var(--color-link-bg);
+  
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .container:has(#clients:target) .navigation__clients {
+    color: var(--color-link-bg);
+  
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .burger--menu__checkbox {
+    display: none;
+  }
+  
+  /**Units
+  *-percentafe
+  *-font % = percent of font-size of parent
+  *-length% = percent of width of parent
+  
+  font-based : em - font parent 3 * 24
+  em - length: font of current element 2 * 24
+  rm: root based 10 * 16 
+  vh 90v 90% of height of browser
+  vw 80v of height of browser
+  */
+  
+  /*Toggle*/
+  .toggle {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  
+  .toggle_checkbox {
+    display: none;
+  }
+  
+  .toggle_title {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-18);
+  }
+  
+  .toggle_label {
+    display: block;
+    position: relative;
+    background-color: var(--color-black);
+    border-radius: 1.5rem;
+    width: 4.5rem;
+    height: 2.2rem;
+    cursor: pointer;
+    padding: 0.3rem 0.4rem;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle_label::after {
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: block;
+    background-color: var(--color-white);
+    transition: 0.3s;
+  }
+  
+  /* This CSS rule targets the `.toggle_label` element that is placed immediately
+     after the `.toggle_checkbox` element that is checked. The `+` selector in CSS
+     is the adjacent sibling combinator, which selects the element that comes immediately
+     after the first specified element (in this case, the `.toggle_checkbox` element).
+     The `:checked` pseudo-class targets the `.toggle_checkbox` element when it is
+     in the checked state, and the `background-color` property sets the background
+     color of the `.toggle_label` element to white. */
+  
+  .toggle_checkbox:checked + .toggle_label::after {
+    transform: translateX(2.1rem);
+    background-color: var(--color-green);
+  }
+  /*Toggle End*/

@@ -1,0 +1,21 @@
+/*Skills*/
+
+.skills__list {
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+  }
+  
+  .skills_title {
+    font-size: var(--font-size-38);
+    font-weight: var(--font-weight-semi-bold);
+  }
+  
+  .experince {
+    font-size: var(--font-size-20);
+    display: inline-block;
+    margin-top: 1rem;
+  }
+/*End Skills*/
+  

@@ -1,0 +1,48 @@
+/*Start CSS Reset TODO:Read about css reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: inherit;
+    display: inline-block;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  html {
+    /* Scroll-behavior, smooth, provides a smooth scrolling effect */
+    /* Scroll-padding-top, 11rem, provides space at the top of the page when scrolling */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 11rem;
+  }
+  
+  body,
+  [type="submit"] {
+    font-size: 1.6rem;
+    font-family: var(--font-family-raleway);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 0;
+  }
+  /*End style reset*/

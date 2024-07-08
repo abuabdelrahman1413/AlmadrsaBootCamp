@@ -1,0 +1,12 @@
+
+
+/*Media*/
+.media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .media__video {
+    width: 100%; /*you need this with video and images if not the width be out of the page*/
+  }
+  /*End media*/

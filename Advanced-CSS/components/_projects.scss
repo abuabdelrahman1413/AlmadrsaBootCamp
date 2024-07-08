@@ -1,0 +1,42 @@
+
+
+/*Projects*/
+.projects__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7.4rem;
+    row-gap: 7.5rem;
+  }
+  
+  .projects__img {
+    box-shadow: 1rem 0 1rem rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+  }
+  
+  .projects__data {
+    align-self: center;
+  }
+  
+  .projects__description {
+    line-height: 1.5;
+  }
+  
+  .projects__link {
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-poppins);
+    color: var(--color-dark-blue);
+    margin-top: 2.3rem;
+  }
+  
+  .projects__link::after {
+    content: "";
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-image: url(images/external-icon.png);
+    background-size: contain;
+    margin-left: 1rem;
+  }
+  
+  /*End projects*/
+  
