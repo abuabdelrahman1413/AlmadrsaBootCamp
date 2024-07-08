@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Mohammed Said</title>
 
@@ -26,7 +25,16 @@
       <source src="video-loop.mp4" type="video/mp4" />
     </video>
     <header class="header">
-      <nav class="navigation_bar">
+
+      <label for="menu" class="burger--menu">
+      <div class="burger--menu__bar"></div>
+      <div class="burger--menu__bar"></div>
+      <div class="burger--menu__bar"></div>  
+      </label>
+
+      <input id="menu" class="burger--menu__checkbox" type="checkbox" />
+
+      <nav class="navigation__bar">
         <ul class="navigation_list">
           <li><a href="#bio" class="navigation_link navigation__bio">Bio</a></li>
           <li><a href="#skills" class="navigation_link navigation__skills">Skills</a></li>
@@ -43,7 +51,7 @@
       </div>
     </header>
 
-    <section id="bio" class="bio section">
+    <section id="bio" class="bio__section section">
       <div class="bio__data">
         <h1 class="bio__heading">
           Hi There, I'M A passionate Software Enginner
@@ -157,7 +165,7 @@
       </div>
     </section>
 
-    <section id="contact" class="contact__section">
+    <section id="contact" class="contact__section section">
       <div class="contact__info">
         <p class="contact__description">
           Feel free to reach out to me any time. I prefer to talk over email,

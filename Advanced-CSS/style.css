@@ -1,5 +1,5 @@
 :root {
-  --container-width: 130rem;
+  --container-width: 119rem;
   --gutter: 2rem;
 
   --color-black: #000;
@@ -69,7 +69,7 @@ ol {
 html {
   /* Scroll-behavior, smooth, provides a smooth scrolling effect */
   /* Scroll-padding-top, 11rem, provides space at the top of the page when scrolling */
-  font-size: 10px;
+  font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 11rem;
 }
@@ -172,6 +172,10 @@ body,
   background-color: var(--color-background);
 }
 
+.navigation__bar {
+  transition: var(--transition-timing);
+}
+
 .navigation_list {
   display: flex; /* ✅ */
   gap: 2rem; /* ✅ */
@@ -180,13 +184,13 @@ body,
 .navigation_link:link,
 .navigation_link:visited {
   text-decoration: none;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
 }
 
 .navigation_link:hover,
 .navigation_link:active {
   text-decoration: underline;
-  color: var(--color-light-blue);
+  color: var(--color-text);
 }
 
 .container:has(#bio:target) .navigation__bio {
@@ -221,6 +225,10 @@ body,
 
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
+}
+
+.burger--menu__checkbox {
+  display: none;
 }
 
 /**Units
@@ -260,7 +268,7 @@ vw 80v of height of browser
   height: 2.2rem;
   cursor: pointer;
   padding: 0.3rem 0.4rem;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .toggle_label::after {
@@ -288,7 +296,7 @@ vw 80v of height of browser
 /*Toggle End*/
 
 /*Bio*/
-.bio {
+.bio__section {
   column-gap: 7.4rem;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -318,15 +326,14 @@ vw 80v of height of browser
   font-weight: var(--font-weight-semi-bold);
   text-decoration: none;
 }
-
-.say-hi-link {
+.bio .say-hi-link {
   background-color: var(--color-link-bg);
-  padding: 0.7rem 4.7rem;
   color: var(--color-white);
+  padding: 0.7rem 4.7rem;
 }
-
-.find-out-link {
+.bio .find-out-link {
   padding: 0.7rem 0;
+  -webkit-margin-start: 1.4rem;
   margin-inline-start: 1.4rem;
 }
 
@@ -584,3 +591,116 @@ html:has(.toggle_checkbox:checked) {
   --color-input-border: var(--color-white);
 }
 /*End theme*/
+
+/*Responsive design*/
+@media (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    row-gap: 8rem;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .bio__pic-content {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+
+  .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__main {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-content: center;
+  }
+  .projects__data:nth-of-type(2) {
+    order: 2;
+  }
+
+  .clinents__opinions {
+    font-size: var(--font-size-24);
+  }
+
+  .contact__section {
+    row-gap: 5rem;
+  }
+
+  .contact__form {
+    grid-row: 1;
+  }
+}
+
+/*mobile version*/
+@media (max-width: 500px) {
+  .header {
+    padding: 0;
+  }
+  .header::before {
+    z-index: 0;
+  }
+
+  .burger--menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.75rem;
+    z-index: 0;
+    align-self: center;
+  }
+
+  .burger--menu__bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-text);
+    transition: var(--transition-timing);
+  }
+
+  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+
+  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden; /*الاثنين ديل بدل display none*/
+  }
+
+  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-40deg);
+  }
+
+  .burger--menu__checkbox:checked + .navigation__bar {
+    top: 100%;
+  }
+  .navigation__bar {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-background);
+    top: 0;
+    padding: 3rem 0;
+    border-bottom: 0.1rem solid var(--color-text);
+    z-index: -1;
+  }
+
+  .navigation_list {
+    justify-content: center;
+  }
+
+  .toggle {
+    padding: 3rem 0;
+    z-index: 1;
+  }
+}
+/**/
