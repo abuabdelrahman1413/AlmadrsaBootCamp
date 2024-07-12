@@ -1,56 +1,108 @@
+/*CSS variables*/
+:root {
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: hsl(0, 0%, 20%);
+    --color-dark-gray: hsl(0, 0%, 12%);
+    --color-black: hsl(0, 0%, 8%);
+    --font-Inter: Inter;
+}
+
+/*End variable*/
+
+/*Reset*/
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 1440px;
-    background-color: hsl(0, 0%, 8%);
-
-}
-
-.container {
-    background-color: hsl(0, 0%, 12%);
-    max-width: 800px;
-    height: auto;
-    /* margin: 0 auto; */
-    padding: 25px;
-    border-radius: 10px;
-}
-
-.jessica-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.jessica-name {
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    font-size: 30px;
-}
-
-.jessica-location {
-    font-weight: 600;
-    color: hsl(75, 94%, 57%);
-    text-align: center;
-    font-size: 14px;
-}
-
-.jessica-job {
-    font-weight: 400;
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    font-size: 14px;
-}
-
-ul {
+    margin: 0;
     list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-li {
-    padding: 20px;
+/*End reset*/
+
+/*Body*/
+body {
+    background-color: var(--color-black);
+    min-height: 100vh;
+    font-family: var(--font-Inter);
+    display: grid;
+    place-content: center;
+}
+
+/*End body*/
+
+/*Container*/
+.container {
+    padding: 2rem;
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    max-width: 500px;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin: 5rem 0;
+}
+
+/*End container*/
+
+/*Img*/
+.bio-img {
+    margin-bottom: 0.4rem;
+    border-radius: 50%;
+    width: 150px;
+}
+
+/*End img*/
+
+/*Name*/
+.bio-name {
+    font-size: 2rem;
+}
+
+/*End name*/
+
+/*Location*/
+.bio-location {
+    color: var(--color-green);
+    margin-top: 0.1rem;
+    font-weight: 700;
+}
+
+/*End location*/
+
+/*Job*/
+.bio-job {
+    margin: 1rem;
+}
+/*End job*/
+
+/*List links*/
+ul li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+/**/
+
+ul li a {
+    display: block;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+ul li a:hover {
+    background-color: var(--color-green);
+    color: var(--color-black);
+}
+
+@media (max-width: 400px) {
+    .container {
+        margin: 5rem 1rem;
+    }
+
+    .bio-job {
+        margin: 1rem 0;
+        font-size: 13px;
+    }
 }

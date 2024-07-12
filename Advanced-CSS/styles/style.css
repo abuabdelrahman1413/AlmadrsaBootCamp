@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --container-width: 119rem;
   --gutter: 2rem;
@@ -93,7 +94,8 @@ body,
 }
 
 .video__loop {
-  position: fixed; /*بتشبه absolute  لكن دي ما بتحترم الأب */
+  position: fixed;
+  /*بتشبه absolute  لكن دي ما بتحترم الأب */
   top: 0;
   left: 0;
   min-width: 100%;
@@ -116,7 +118,6 @@ body,
   font-size: var(--font-size-38);
   font-weight: var(--font-weight-bold);
   margin-bottom: 2.5rem;
-  text-transform: uppercase;
 }
 
 .section {
@@ -169,13 +170,16 @@ body,
   background-color: var(--color-background);
 }
 
-.navigation__bar {
+.navigation {
   transition: var(--transition-timing);
+  background-color: var(--color-background);
 }
 
-.navigation_list {
-  display: flex; /* ✅ */
-  gap: 2rem; /* ✅ */
+.navigation__list {
+  display: flex;
+  /* ✅ */
+  gap: 2rem;
+  /* ✅ */
 }
 
 .navigation_link:link,
@@ -190,37 +194,18 @@ body,
   color: var(--color-text);
 }
 
-.container:has(#bio:target) .navigation__bio {
-  color: var(--color-link-bg);
-  text-decoration: underline;
-  font-weight: var(--font-weight-bold);
-}
-
-.container:has(#skills:target) .navigation__skills {
-  color: var(--color-link-bg);
-  text-decoration: underline;
-  font-weight: var(--font-weight-bold);
-}
-
-.container:has(#media:target) .navigation__media {
-  color: var(--color-link-bg);
-  text-decoration: underline;
-  font-weight: var(--font-weight-bold);
-}
-
-.container:has(#projects:target) .navigation__projects {
-  color: var(--color-link-bg);
-  text-decoration: underline;
-  font-weight: var(--font-weight-bold);
-}
-
+.container:has(#bio:target) .navigation__bio,
+.container:has(#skills:target) .navigation__skills,
+.container:has(#media:target) .navigation__media,
+.container:has(#projects:target) .navigation__projects,
 .container:has(#clients:target) .navigation__clients {
   color: var(--color-link-bg);
   text-decoration: underline;
   font-weight: var(--font-weight-bold);
 }
 
-.burger--menu__checkbox {
+
+.burger-menu__checkbox {
   display: none;
 }
 
@@ -280,17 +265,22 @@ vw 80v of height of browser
    The `:checked` pseudo-class targets the `.toggle_checkbox` element when it is
    in the checked state, and the `background-color` property sets the background
    color of the `.toggle_label` element to white. */
-.toggle_checkbox:checked + .toggle_label::after {
+
+.toggle__checkbox:checked+.toggle__label {
+  background: var(--color-white);
+  /* ✅ */
+}
+
+.toggle_checkbox:checked+.toggle_label::after {
   transform: translateX(2.1rem);
   background-color: var(--color-green);
 }
 
 /*Toggle End*/
 /*Bio*/
-.bio__section {
+.bio {
   grid-template-columns: repeat(2, 1fr);
-  -moz-column-gap: 7.4rem;
-       column-gap: 7.4rem;
+  column-gap: 7.4rem;
   row-gap: 0;
 }
 
@@ -335,21 +325,24 @@ vw 80v of height of browser
   0% {
     transform: translateY(0.5rem);
   }
+
   35% {
     transform: translateY(-0.5rem);
   }
+
   70% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(0);
   }
 }
+
 .bio__arrow {
   display: inline-block;
   animation: jump 1s infinite alternate ease-in-out;
   font-weight: 900;
-  font-size: var(--font-size-35);
 }
 
 .bio__pic-content {
@@ -357,7 +350,6 @@ vw 80v of height of browser
   position: relative;
   align-items: flex-end;
   justify-self: end;
-  border-radius: 50%;
 }
 
 .bio__pic-content::before {
@@ -379,9 +371,9 @@ vw 80v of height of browser
 /*Skills*/
 .skills__list {
   display: grid;
-  row-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 4rem;
+  row-gap: 5rem;
+
 }
 
 .skills_title {
@@ -404,7 +396,8 @@ vw 80v of height of browser
 }
 
 .media__video {
-  width: 100%; /*you need this with video and images if not the width be out of the page*/
+  width: 100%;
+  /*you need this with video and images if not the width be out of the page*/
 }
 
 /*End media*/
@@ -413,7 +406,7 @@ vw 80v of height of browser
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 7.4rem;
-       column-gap: 7.4rem;
+  column-gap: 7.4rem;
   row-gap: 7.4rem;
 }
 
@@ -459,7 +452,8 @@ vw 80v of height of browser
   display: flex;
   overflow-x: auto;
   /*scroll-snap-type: x mandatory; mean that we can scroll on x axis*/
-  scroll-snap-type: x mandatory; /*بيعمل سكرول بشكل الزامي بشكل أفقي الخيارات الأخرى none proximety*/
+  scroll-snap-type: x mandatory;
+  /*بيعمل سكرول بشكل الزامي بشكل أفقي الخيارات الأخرى none proximety*/
   gap: 2.3rem;
 }
 
@@ -475,7 +469,7 @@ vw 80v of height of browser
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 20rem;
-       column-gap: 20rem;
+  column-gap: 20rem;
   row-gap: 0;
   align-items: center;
 }
@@ -583,51 +577,64 @@ html:has(.toggle_checkbox:checked) {
     font-size: 8px;
   }
 }
+
 @media (max-width: 800px) {
   html {
     font-size: 8px;
   }
+
   .container {
     row-gap: 8rem;
   }
+
   .section {
     grid-template-columns: 1fr;
   }
+
   .bio__pic-content {
     grid-row: 1;
     justify-self: center;
     margin-bottom: 4rem;
   }
+
   .skills__list {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .projects__main {
     grid-template-columns: 1fr;
     row-gap: 6rem;
     justify-content: center;
   }
+
   .projects__data:nth-of-type(2) {
     order: 2;
   }
+
   .clinents__opinions {
     font-size: var(--font-size-24);
   }
+
   .contact__section {
     row-gap: 5rem;
   }
+
   .contact__form {
     grid-row: 1;
   }
 }
+
 /*mobile version*/
 @media (max-width: 500px) {
   .header {
     padding: 0;
   }
+
   .header::before {
     z-index: 0;
   }
-  .burger--menu {
+
+  .burger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -635,40 +642,50 @@ html:has(.toggle_checkbox:checked) {
     z-index: 0;
     align-self: center;
   }
-  .burger--menu__bar {
+
+  .burger-menu__bar {
     height: 0.3rem;
     width: 4.375rem;
     background-color: var(--color-text);
     transition: var(--transition-timing);
   }
-  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(1) {
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
     transform: translateY(10px) rotate(40deg);
   }
-  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(2) {
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
     opacity: 0;
-    visibility: hidden; /*الاثنين ديل بدل display none*/
+    visibility: hidden;
+    /*الاثنين ديل بدل display none*/
   }
-  .header:has(.burger--menu__checkbox:checked) .burger--menu__bar:nth-child(3) {
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
     transform: translateY(-10px) rotate(-40deg);
   }
-  .burger--menu__checkbox:checked + .navigation__bar {
+
+  .burger-menu__checkbox:checked+.navigation {
     top: 100%;
   }
-  .navigation__bar {
+
+  .navigation {
     position: absolute;
-    width: 100%;
-    background-color: var(--color-background);
+    width: 100vw;
     top: 0;
     padding: 3rem 0;
     border-bottom: 0.1rem solid var(--color-text);
     z-index: -1;
   }
-  .navigation_list {
+
+  .navigation__list {
     justify-content: center;
   }
+
   .toggle {
     padding: 3rem 0;
     z-index: 1;
   }
 }
-/*End responsive*//*# sourceMappingURL=style.css.map */
+
+/*End responsive*/
+/*# sourceMappingURL=style.css.map */
