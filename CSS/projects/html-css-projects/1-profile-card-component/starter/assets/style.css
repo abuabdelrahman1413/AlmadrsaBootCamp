@@ -1,0 +1,130 @@
+:root {
+  --color-white: #fff;
+  --color-grey: #c4c4c4;
+}
+
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* End CSS Reset */
+
+/* container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image:  linear-gradient(135deg, #58f745 25%, transparent 25%), linear-gradient(225deg, #58f745 25%, transparent 25%), linear-gradient(45deg, #58f745 25%, transparent 25%), linear-gradient(315deg, #58f745 25%, #e5e5f7 25%);
+  background-position:  4px 0, 4px 0, 0 0, 0 0;
+  background-size: 4px 4px;
+  background-repeat: repeat;
+}
+/* End container */
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  min-width: 35rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.pic {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 0.5rem solid var(--color-white);
+
+}
+
+
+.top {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: linear-gradient(135deg, #58f745 25%, transparent 25%),
+    linear-gradient(225deg, #58f745 25%, transparent 25%),
+    linear-gradient(45deg, #58f745 25%, transparent 25%),
+    linear-gradient(315deg, #58f745 25%, #e5e5f7 25%);
+  background-position: 40px 0, 40px 0, 0 0, 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
+
+  height: 10rem;
+}
+
+.midd {
+	margin: 0 auto;
+	margin-top: -6rem;
+	text-align: center;
+	font-size: 1.1rem;
+	z-index: 1;
+	margin-bottom: 1.2rem;
+}
+
+.bott {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-top: 0.1 rem solid var(--color-grey);
+}
+
+.col {
+	/* flex-basis: 100%; */
+	padding: 1.8rem 1.5rem;
+	text-align: center;
+}
+
+.col:nth-child(1)
+{
+	border-right: 0.1rem solid var(--color-grey);
+
+} 
+
+.icon {
+	height: 2.2rem;
+	width: 2.2rem;
+}
+
+.title {
+	font-size: 1.6rem;
+	font-weight: 200;
+}
