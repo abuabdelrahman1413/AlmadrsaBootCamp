@@ -77,6 +77,47 @@ body {
 
 }
 
+/* .light_controls {
+	position: absolute;
+	top: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.light_label {
+	width: 4.2rem;
+	height: 2.2rem;
+	border-radius: 1.5rem;
+	background-color: black;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	padding: 0.3rem 0.4rem;
+}
+
+.light_label::after {
+	background-color: white;
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+	
+	border-radius: 50%;
+	content: "";
+	transition: 0.3s;
+
+}
+
+.light_input {
+	display: none;
+}
+.light_input:checked + .light_label {
+	background-color: #fff;
+}
+
+.light_input:checked + .light_label::after {
+	background-color: #58f745;
+	transform: translateX(2rem);
+} */
 
 .top {
   background-color: #e5e5f7;
